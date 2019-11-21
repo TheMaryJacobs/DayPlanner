@@ -6,7 +6,7 @@ $(document).ready(function() {
         // AND tHE CURRENT TIME!
     const currentTime = moment().format('LT');
     $('#currentTime').text(currentTime)
-    
+        // AND THE DAY OF THE WEEK!
     const weekDay = moment().format('dddd');
     $('#weekDay').text(weekDay)
 
@@ -23,9 +23,11 @@ $(document).ready(function() {
         if (timeIndex < hourEl){
             $(this).addClass( "past" );
         }
+
         if (timeIndex === hourEl) {
             $(this).addClass( "present" );
         }
+    
         if (timeIndex > hourEl) {
             $(this).addClass( "future" );
         }
@@ -34,8 +36,8 @@ $(document).ready(function() {
     // //Event listener for all buttons
 
     $('.saveBtn').click(function(event) {
-        // const valueAttr = ("data-hour").val();
-        const description = JSON.parse(window.localStorage.getItem("#description"));
+        const valueAttr = $("data-hour").val();
+        const description = JSON.parse(localStorage.setItem("#description", valueAttr));
         console.log('clicked', $(this.text()));
 
         alert("Saved!");
@@ -49,10 +51,6 @@ $(document).ready(function() {
         document.execCommand("copy");
 
         return copied;
-      
-    
-    
-    
     }
 
     $(".saveBtn").on("click", function() {
@@ -62,7 +60,7 @@ $(document).ready(function() {
         $("textarea").select();
 
         document.execCommand('copy');
-        console.log("If I have reached this line, it was a success!");
+
         localStorage.setItem("description", contents);
         console.log(contents);
         });
