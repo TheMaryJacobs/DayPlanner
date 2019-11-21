@@ -22,33 +22,35 @@ body {
   }
 
 h1{
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 42px;
     color: white;
 }
- .line{
-     line-height: 3px;
-     color: white;
+
+ hr.line {
+    border: 1px solid white;
+    width: 80%;
  }
 
 
 #weekDay{
     font-family: 'Roboto Condensed', sans-serif;
-    text-transform: lowercase;
-    letter-spacing: 4px;
-    color: #e96443;
-    font-size:30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color:#904e95;
+    font-size:36px;
+    padding-top: 15px;
 }
   #todayIs {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 56px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
     color: #bd586f;
   }
 
   #currentTime {
      font-family: 'Roboto Condensed', sans-serif;
-     font-size: 46px;
-     color: #904e95;
+     font-size: 42px;
+     color: #fcb7a6;
  }
   
   .description{
@@ -72,7 +74,7 @@ h1{
   
   /* changes colors */
   .hour {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 26px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -103,6 +105,7 @@ h1{
     border-bottom-right-radius: 15px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
+    border: none;
   }
   
   .saveBtn i:hover {

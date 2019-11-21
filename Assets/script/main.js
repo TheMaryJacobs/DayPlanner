@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
         // display the date in the jumbotron THIS WORKS!
-    const TodayIs = moment().format('MMMM Do YYYY');
+    const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
         // AND tHE CURRENT TIME!
-    const currentTime = moment().format('LTS');
+    const currentTime = moment().format('LT');
     $('#currentTime').text(currentTime)
     
     const weekDay = moment().format('dddd');
@@ -41,9 +41,6 @@ $(document).ready(function() {
         alert("Saved!");
     });
 
-    //parallax attempt? make currect time of day in a static parallax section
-    // .addClass("section static");
-
 
     function copyText() {
         const copied = $("#description");
@@ -52,8 +49,11 @@ $(document).ready(function() {
         document.execCommand("copy");
 
         return copied;
-
-      }
+      
+    
+    
+    
+    }
 
     $(".saveBtn").on("click", function() {
 
