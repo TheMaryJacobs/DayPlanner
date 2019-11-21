@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Caveat|Lobster+Two|Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"rel="stylesheet"/>
   <link rel="stylesheet" href="./Assets/css/styles.css">
@@ -12,62 +13,65 @@
 </head>
 
 <body>
+<main class="wrapper">
+    
   <div class="container">
-    <header class="jumbotron col-md-12">
-      <h1 class="display-3 text-center">Work Day Scheduler</h1>
-      <p class="lead text-center">A simple calendar app for scheduling your work day</p>
+    <header class="jumbotron col-md-12 section parallax bg1">
+      <h1 class="display-3 text-center">Today is the Day</h1>
+      <p class="lead text-center">Let's make it a good one.</p>
       <p id="currentDay" class="lead text-center"></p>
     </header>
 
-    <main class="main">
+  <section class="main">
         <div class="row time-block">
-            <span value="9" class="col-md-2 hour">9:00am</span>
-            <textarea class="col-md-8 description" name="9" ></textarea>
-            <button class="col-md-2 saveBtn py-3" id="9"><i class="btn btn-lg btn-info"></i></button>
+            <span value="9" class="col-2 hour">9:00am</span>
+            <textarea class="col-8 description" name="9" ></textarea>
+            <button class="col-2 saveBtn py-3" id="9"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="10" class="col-md-2 hour">10:00am</span>
-            <textarea  class="col-md-8 description" name="10"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="10"><i class="btn btn-lg btn-info"></i></button>
+            <span value="10" class="col-2 hour">10:00am</span>
+            <textarea  class="col-8 description" name="10"></textarea>
+            <button class="col-2 saveBtn py-3" id="10"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="11" class="col-md-2 hour">11:00am</span>
-            <textarea class="col-md-8 description " name="11"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="11"><i class="btn btn-lg btn-info"></i></button>
+            <span value="11" class="col-2 hour">11:00am</span>
+            <textarea class="col-8 description " name="11"></textarea>
+            <button class="col-2 saveBtn py-3" id="11"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="12" class="col-md-2 hour">12:00pm</span>
-            <textarea class="col-md-8 description" name="12"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="12"><i class="btn btn-lg btn-info"></i></button>
+            <span value="12" class="col-2 hour">12:00pm</span>
+            <textarea class="col-8 description" name="12"></textarea>
+            <button class="col-2 saveBtn py-3" id="12"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="13" class="col-md-2 hour">1:00pm</span>
-            <textarea class="col-md-8 description" name="13"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="13"><i class="btn btn-lg btn-info"></i></button>
+            <span value="13" class="col-2 hour">1:00pm</span>
+            <textarea class="col-8 description" name="13"></textarea>
+            <button class="col-2 saveBtn py-3" id="13"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="14" class="col-md-2 hour">2:00pm</span>
-            <textarea class="col-md-8 description" name="14"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="14"><i class="btn btn-lg btn-info"></i></button>
+            <span value="14" class="col-2 hour">2:00pm</span>
+            <textarea class="col-8 description" name="14"></textarea>
+            <button class="col-2 saveBtn py-3" id="14"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="15" class="col-md-2 hour">3:00pm</span>
-            <textarea class="col-md-8 description" name="15"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="15"><i class="btn btn-lg btn-info"></i></button>
+            <span value="15" class="col-2 hour">3:00pm</span>
+            <textarea class="col-8 description" name="15"></textarea>
+            <button class="col-2 saveBtn py-3" id="15"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="16" class="col-md-2 hour">4:00m</span>
-            <textarea class="col-md-8 description" name="16"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="16"><i class="btn btn-lg btn-info"></i></button>
+            <span value="16" class="col-2 hour">4:00m</span>
+            <textarea class="col-8 description" name="16"></textarea>
+            <button class="col-2 saveBtn py-3" id="16"><i class="far fa-save"></i></button>
         </div>
         <div class="row time-block">
-            <span value="17" class="col-md-2 hour">5:00pm</span>
-            <textarea class="col-md-8 description" name="17"></textarea>
-            <button class="col-md-2 saveBtn py-3" id="17"><i class="btn btn-lg btn-info"></i></button>
+            <span value="17" class="col-2 hour">5:00pm</span>
+            <textarea class="col-8 description" name="17"></textarea>
+            <button class="col-2 saveBtn py-3" id="17"><i class="far fa-save"></i></button>
         </div>
-    </main>
+    </section>
+    
   </div>
-
+</main>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="Assets/script/main.js"></script>
