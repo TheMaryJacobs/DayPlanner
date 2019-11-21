@@ -1,6 +1,6 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: rgb(78, 85, 92);
+    background-image: url(../images/Grapefruit\ Sunset.png);
+    /* background-color: rgb(78, 85, 92); */
     font-size: 16px;
     line-height: 1;
   }
@@ -16,7 +16,7 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.795);
+    background-color: rgba(0, 0, 0, 0.801);
     color: black;
     border-radius: 0;
   }
@@ -24,26 +24,31 @@ body {
 h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 42px;
-    color: slategrey;
+    color: white;
 }
+ .line{
+     line-height: 3px;
+     color: white;
+ }
+
 
 #weekDay{
-    font-family: 'Lobster Two', cursive;
-    font-size:42px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    color: #e96443;
+    font-size:30px;
 }
-
-}
-  #todayIs{
+  #todayIs {
     font-family: 'Bebas Neue', cursive;
-    font-size: 42px;
-    color: slategrey;
-    padding-top: 25px;
+    font-size: 56px;
+    color: #bd586f;
   }
 
-  #currentTime{
-    font-family: 'Bebas Neue', cursive;
-     font-size: 36px;
-     color: salmon;
+  #currentTime {
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 46px;
+     color: #904e95;
  }
   
   .description{
@@ -65,6 +70,7 @@ h1{
     height: 80px
   }
   
+  /* changes colors */
   .hour {
     font-family: 'Bebas Neue', cursive;
     font-size: 26px;
@@ -78,24 +84,24 @@ h1{
   }
   
   .past {
-    background-color:rgba(70, 120, 170, 0.8);
+    background-color:rgba(233, 101, 68, 0.8);
     color: white;
   }
   
   .present {
-    background-color: #fffc61;
+    background-color:rgba(188, 87, 111, 0.8);
     color: white;
   }
   
   .future {
-    background-color: hsla(276, 42%, 62%, 0.8);
+    background-color:rgba(144, 78, 149, 0.8);
     color: white;
   }
   
   .saveBtn {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: slategrey;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
   }
   
@@ -105,16 +111,4 @@ h1{
   }
   /* ------------------------------------------------------------------------ */
 
-  .parallax {
-    /* The image used */
-    background-image: url("../images/Turquoise.jpeg;");
   
-    /* Set a specific height */
-    height: 500px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }

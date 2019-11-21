@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
         // display the date in the jumbotron THIS WORKS!
-    const TodayIs = moment().format('dddd , MMMM Do YYYY');
-    $('#currentDay').text(TodayIs);
+    const TodayIs = moment().format('MMMM Do YYYY');
+    $('#todayIs').text(TodayIs);
         // AND tHE CURRENT TIME!
     const currentTime = moment().format('LTS');
     $('#currentTime').text(currentTime)
@@ -45,25 +45,25 @@ $(document).ready(function() {
     // .addClass("section static");
 
 
-    // function copyText() {
-    //     const copied = $("#description");
+    function copyText() {
+        const copied = $("#description");
 
-    //     copied.select();
-    //     document.execCommand("copy");
+        copied.select();
+        document.execCommand("copy");
 
-    //     return copied;
+        return copied;
 
-    //   }
+      }
 
-    // $(".saveBtn").on("click", function() {
+    $(".saveBtn").on("click", function() {
 
-    //     $('textarea[name*=' + id +'').select();
-    //     document.execCommand("copy");
-    //     $("textarea").select();
+        $('textarea[name*=' + id +'').select();
+        document.execCommand("copy");
+        $("textarea").select();
 
-    //     document.execCommand('copy');
-    //     console.log("If I have reached this line, it was a success!");
-    //     localStorage.setItem("description", contents);
-    //     console.log(contents);
-    //     });
+        document.execCommand('copy');
+        console.log("If I have reached this line, it was a success!");
+        localStorage.setItem("description", contents);
+        console.log(contents);
+        });
 });
