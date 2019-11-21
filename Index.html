@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Caveat|Lobster+Two|Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"rel="stylesheet"/>
   <link rel="stylesheet" href="./Assets/css/styles.css">
   <title>D A Y P L A N N E R</title>
 </head>
 
 <body>
-<main class="wrapper">
-    
-  <div class="container">
-    <header class="jumbotron col-md-12 section parallax bg1">
-      <h1 class="display-3 text-center">Today is the Day</h1>
-      <p class="lead text-center">Let's make it a good one.</p>
-      <p id="currentDay" class="lead text-center"></p>
+
+      <header class="jumbotron jumbotron-fluid">
+        <h1 class="display-3 text-center">Today is</h1>
+        <p id="weekDay" class="lead text-center"></p>
+        <p id="todayIs" class="lead text-center"></p>
+        <p id="currentTime" class="lead text-center"></p>
     </header>
 
+<div class="container parallax">
+  
+
+<main class="">
   <section class="main">
         <div class="row time-block">
             <span value="9" class="col-2 hour">9:00am</span>
@@ -72,6 +74,7 @@
     
   </div>
 </main>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="Assets/script/main.js"></script>

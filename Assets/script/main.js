@@ -1,14 +1,19 @@
 $(document).ready(function() {
 
-    
         // display the date in the jumbotron THIS WORKS!
-    const now = moment().format('DD MMM YYYY');
-    $('#currentDay').text(now);
+    const TodayIs = moment().format('dddd , MMMM Do YYYY');
+    $('#currentDay').text(TodayIs);
+        // AND tHE CURRENT TIME!
+    const currentTime = moment().format('LTS');
+    $('#currentTime').text(currentTime)
+    
+    const weekDay = moment().format('dddd');
+    $('#weekDay').text(weekDay)
+
 
     //get the hour of day to set colors for hour element.
     let hourEl = moment().get('hour');
     const description = [];
-
 
     // change color of each time span element based on time of day
     $(".hour").each(function() {

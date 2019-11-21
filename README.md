@@ -24,3 +24,6 @@ You'll need to use the Moment.js library to work with date and time. Be sure to 
 ### Resources
 Moment Cheat Sheet
 https://momentjs.com/
+
+Parallax? Yes please.
+https://alligator.io/css/pure-css-parallax/
