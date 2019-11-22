@@ -13,7 +13,7 @@ This simple application allows the user to input events and reminders during an 
 ## Images
 ![screenshot1](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/Screenshot1.png)
 ![screenshot2](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/Screenshot2.png)
-![screenshot3](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/Screenshot3.png)
+![screenshot3](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/screenshot3.png)
 
 
 ### Resources
