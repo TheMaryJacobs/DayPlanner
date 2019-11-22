@@ -4,26 +4,23 @@ Schedule thy self.
 https://themaryjacobs.github.io/DayPlanner/
 
 
-## Instructions
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Description
+A simple and beautiful single-day planner, to keep you on track from 9-5. 
 
-The app should display standard business hours (9 a.m. to 5 p.m.). Each time slot should represent one hour and contain the following:
+## Details
+This simple application allows the user to input events and reminders during an average business day. The current day of the week, date, and time are displayed at the top of the page, so it is easy to reference. As the day progresses, the current hour is highlighted in pink - while past time appears red, and upcoming occurances are purple. 
 
-The time
+## Images
+![screenshot1]()
+![screenshot2]()
+![screenshot3]()
 
-A field to hold user input
-
-A save button
-
-Clicking on the save button will store the time and user input in localStorage.
-
-Near the top of the calendar, the application should display the current day. Additionally, each hour should be color coded to reflect whether the time slot is in the past, the present, or the future. This will change depending on the time of day.
-
-You'll need to use the Moment.js library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
 ### Resources
 Moment Cheat Sheet
 https://momentjs.com/
 
-Parallax? Yes please.
-https://alligator.io/css/pure-css-parallax/
+https://www.freecodecamp.org/forum/t/javascript-for-handling-browser-refresh-close-events/242567
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
+
