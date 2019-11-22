@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-        // display the date in the jumbotron THIS WORKS!
+    // display the date in the jumbotron THIS WORKS!
     const TodayIs = moment().format('MMMM Do , YYYY');
     $('#todayIs').text(TodayIs);
         // AND tHE CURRENT TIME!
@@ -11,57 +11,90 @@ $(document).ready(function() {
     $('#weekDay').text(weekDay)
 
 
-    //get the hour of day to set colors for hour element.
-    let hourEl = moment().get('hour');
-    const description = [];
-
-    // change color of each time span element based on time of day
-    $(".hour").each(function() {
-        const timeIndex = parseInt($(this).attr('value'));
-
-        //adds classes to change color from CSS based on the current time
-        if (timeIndex < hourEl){
-            $(this).addClass( "past" );
-        }
-
-        if (timeIndex === hourEl) {
-            $(this).addClass( "present" );
-        }
-    
-        if (timeIndex > hourEl) {
-            $(this).addClass( "future" );
-        }
-    });
-
-    // //Event listener for all buttons
-
-    $('.saveBtn').click(function(event) {
-        const valueAttr = $("data-hour").val();
-        const description = JSON.parse(localStorage.setItem("#description", valueAttr));
-        console.log('clicked', $(this.text()));
-
-        alert("Saved!");
-    });
+//get the hour of day to set colors for hour element.
+let hourEl = moment().get('hour');
 
 
-    function copyText() {
-        const copied = $("#description");
+// change color of each time span element based on time of day
+$(".hour").each(function() {
+    const timeIndex = parseInt($(this).attr('value'));
 
-        copied.select();
-        document.execCommand("copy");
-
-        return copied;
+    //adds classes to change color from CSS based on the current time
+    if (timeIndex < hourEl){
+        $(this).addClass( "past" );
+    }
+    // upgraded color pallet to pretty gradient
+    if (timeIndex === hourEl) {
+        $(this).addClass( "present" );
+    }
+    //kinda looks like a sunset, eh?
+    if (timeIndex > hourEl) {
+        $(this).addClass( "future" );
     }
 
-    $(".saveBtn").on("click", function() {
 
-        $('textarea[name*=' + id +'').select();
-        document.execCommand("copy");
-        $("textarea").select();
+});
 
-        document.execCommand('copy');
+// ===================================================
+//go get all of the buttons to make them perform the save function
+document.querySelectorAll(".btn").forEach(function(save){
+    //add event listeners
+    save.addEventListener("click", function(){
+        // let the input value equal the saved "value" or user input from that field.
+      let inputVal = save.getAttribute("value");
 
-        localStorage.setItem("description", contents);
-        console.log(contents);
-        });
+      console.log(inputVal);
+    saveInput(inputVal);  
+
+    })
+
+  })
+  
+
+  function saveInput(x) {
+
+    let userInput = document.getElementById("userInput" + x).value;
+    console.log(x);
+    let inputName = "userInput" + x;
+    storageData.setItem(inputName, userInput);
+  }
+
+
+
+function pullInput(){
+
+  for(i = 0 ; i < userInput.length ; i ++){
+    let placeHolder = "userInput" + i;
+    console.log(placeHolder);
+    if(storageData.getItem(placeHolder) === null)
+    {
+      continue;
+    }
+    else{
+    userInput[i].innerHTML = storageData.getItem(placeHolder);
+    }
+  }
+
+}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
