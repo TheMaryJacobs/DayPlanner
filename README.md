@@ -11,9 +11,9 @@ A simple and beautiful single-day planner, to keep you on track from 9-5.
 This simple application allows the user to input events and reminders during an average business day. The current day of the week, date, and time are displayed at the top of the page, so it is easy to reference. As the day progresses, the current hour is highlighted in pink - while past time appears red, and upcoming occurances are purple. 
 
 ## Images
-![screenshot1]()
-![screenshot2]()
-![screenshot3]()
+![screenshot1](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/Screenshot1.png)
+![screenshot2](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/Screenshot2.png)
+![screenshot3](https://github.com/TheMaryJacobs/DayPlanner/blob/master/Assets/images/screenshot3.png)
 
 
 ### Resources
