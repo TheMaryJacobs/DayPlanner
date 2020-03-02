@@ -12,6 +12,10 @@ $(document).ready(function() {
     const weekDay = moment().format('dddd');
     $('#weekDay').text(weekDay)
 
+    function updateTime (){
+        document.getElementById("currentTime")
+        .innerHTML = moment().format('h:mm a');
+    } setInterval(updateTime, 1000);
 
     //get the hour of day to set colors for hour element.
     let hourEl = moment().get('hour');
@@ -51,68 +55,93 @@ $(document).ready(function() {
     const userInput9 = document.getElementById("userInput17");
     const inputs = [userInput1,userInput2,userInput3,userInput4,userInput5,userInput6,userInput7,userInput8,userInput9
     ];
+    
 
     // pullInput();
 
     //go get all of the buttons to make them perform the save function
-    document.querySelectorAll(".saveBtn").forEach(function(save){
+    const saveButtons = document.querySelectorAll(".saveBtn")
+        saveButtons.forEach(function(save){
         //add event listeners
+        
         save.addEventListener("click", function(){
             // let the input value equal the saved "value" or user input from that field.
         let inputVal = save.getAttribute("value");
-            
+        
         // console.log(inputVal);
         saveInput(inputVal);  
         })
-
+        
     })
 
     function saveInput(x) {
 
-        let userInput = document.getElementById("userInput" + x).value;
+        // let userInput = document.getElementById("userInput" + x).value;
         // console.log(x);
-        let inputName = "userInput";
-        storageData.setItem(userInput, inputName);
+        let inputName = document.getElementById("userInput" + x).value;
+        localStorage.setItem("userInput" + x, inputName);
         
-        console.log(inputName, userInput);
+        console.log("saved!");
+        console.log(inputName)
+
+        
     }
 
 // I FEEL LIKE I AM VERY CLOSE BUT I AM VERY STUCK. 
 // Can not get userInput to repopulate after a refresh. 
 
-function pullInput(){
-    
-    for(i = 0 ; i < 9 ; i ++){
-        let placeHolder = "userInput" + i;
-        // console.log(placeHolder);
-        if(storageData.getItem(placeHolder) === null)
-        {
-        continue;
-        }
-        else{
-        inputs[i].innerHTML = storageData.getItem(placeHolder);
-        }
-    }
-
-    }
-    pullInput();
+// function pullInput(i){
+//     // let userInput = "userInput" + i;
+//     for(i = 0 ; i < 9 ; i ++){
+//         if(localStorage.getItem(userInput[i].value) === null)
+//         {
+//         continue;
+//         }
+//         else{
+//             const savedItem = JSON.parse(window.localStorage.getItem(userInput.value));
+//             savedItem[i].innerHTML(savedItem);
+//         // userInput[i].innerHTML = localStorage.getItem(inputName);
+//         }
 
         
+//     }
+// console.log(userInput[i].value);
+//     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function checkLocalStorage(){
+        // Defines a variable to store existing activities ... unsure if neccessary to define
+        let existingHours = [];
+        
+        // If statement used to see if there are any existing activities created by the user, that were stored in local storage and if those activities are from the current date
+        if(localStorage.getItem('existingHours')){
+            // Gets existingHours, which is stringified, and stores it in the variable activitiesStringified
+            const hoursStringified = localStorage.getItem('existingHours');
+            // Transforms stringified data into an object
+            existingHours = JSON.parse(hoursStringified);
+            // Get date of existing data
+            const existingDate = existingHours[0].date;
+            // Get current date
+            const currentDate = currentDateHour().date;
+            // Compare current date and the date of the existing data. If they are equal, the data is used for rendering the calendar, if not the data is not used.
+            if (currentDate === existingDate){
+                // returns the object existingActivities, which contains any activities the user created for that date.
+                return existingHours;
+            }
+            else{
+                // This makes sure data from a previous day is not used.
+                return false;
+            };
+        }   
+            else {
+                // This makes sure if there is no data, a blank array is created.
+                return false;
+        };
+    };
+    checkLocalStorage ();
+    // pullInput();
+    
+    // console.log(userInput12);
+        
 
 
 
